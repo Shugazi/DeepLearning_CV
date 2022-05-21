@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import os
 
+
 class SimpleDatasetLoader:
     def __init__(self, preprocessors=None):
         # store the image preprocessor
@@ -14,12 +15,12 @@ class SimpleDatasetLoader:
             self.preprocessors = []
 
     def load(self, imagePaths, verbose=-1):
-        # initilize the list of feawture and labels
+        # initialize the list of feature and labels
         data = []
         labels = []
 
         # loop over the input images
-        for(i, imagePath) in enumerate(imagePaths):
+        for (i, imagePath) in enumerate(imagePaths):
             # load the image and extract the class label assuming
             # that our path has the following format:
             # /path/to/dataset/{class}/{iamge}.jpg
@@ -39,8 +40,8 @@ class SimpleDatasetLoader:
             labels.append(label)
 
             # show and update every 'verbose' images
-            if verbose > 0 and i > 0 and (i+1) % verbose ==0:
+            if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
                 print("[INFO] processed {}/{}").format(i + 1,
-                     len(imagePaths))
+                                                       len(imagePaths))
         # return a tuple of the data and labels
-        return (np.array(data), np.array(labels))
+        return np.array(data), np.array(labels)
