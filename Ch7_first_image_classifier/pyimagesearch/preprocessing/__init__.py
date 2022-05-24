@@ -1,2 +1,2 @@
 # import the necessary packages
-from .SimplePreprocessor import SimplePreprocessor
+from .simplepreprocessor import SimplePreprocessor

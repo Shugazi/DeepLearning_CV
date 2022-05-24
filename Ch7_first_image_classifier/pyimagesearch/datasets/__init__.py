@@ -1,2 +1,2 @@
 # import the necessary packages
-from .SimpleDatasetLoader import SimpleDatasetLoader
+from .simpledatasetloader import SimpleDatasetLoader
