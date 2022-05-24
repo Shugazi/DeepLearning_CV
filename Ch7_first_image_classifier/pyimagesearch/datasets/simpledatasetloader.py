@@ -41,7 +41,7 @@ class SimpleDatasetLoader:
 
             # show and update every 'verbose' images
             if verbose > 0 and i > 0 and (i + 1) % verbose == 0:
-                print("[INFO] processed {}/{}").format(i + 1,
-                                                       len(imagePaths))
+                print("[INFO] processed {}/{}".format(i + 1,
+                                                      len(imagePaths)))
         # return a tuple of the data and labels
         return np.array(data), np.array(labels)
